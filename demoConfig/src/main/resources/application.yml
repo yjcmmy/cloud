@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yjcmmy/demoConfig.git
+          username: 18717878625@163.com
+          password: Asdf85933634
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        register: true
+        enabled: true
+        instance-id: 1
+
+server:
+  port: 1201
+
+
+

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: zk-client
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        register: true
+        enabled: true
+        instance-id: 1
+    config:
+      ## 指定配置中心文件的{profile}
+      ## profile: dev
+      ## 指定配置中心文件的{label}
+      label: master
+      discovery:
+        ## 发现 Cloud Config 服务
+        enabled: true
+        ## 指定配置服务的服务 id
+        service-id: config-server
+server:
+  port: 6062
